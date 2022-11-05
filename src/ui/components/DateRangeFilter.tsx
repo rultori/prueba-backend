@@ -1,17 +1,16 @@
-import { FormElement, Grid, Input } from '@nextui-org/react'
+import { FormElement, Grid, GridProps, Input } from '@nextui-org/react'
 import { ChangeEvent, FC } from 'react'
 
-interface Props {
+interface Props extends GridProps {
     handleStartDateChange: (e: ChangeEvent<FormElement>) => void,
     handleEndDateChange: (e: ChangeEvent<FormElement>) => void,
     startDate: string | null,
     endDate: string | null,
-    xs?: number,
 }
 
-export const DateRangeFilter: FC<Props> = ({ handleStartDateChange, handleEndDateChange, startDate, endDate, xs }) => {
+export const DateRangeFilter: FC<Props> = ({ handleStartDateChange, handleEndDateChange, startDate, endDate, xs, sm, md }) => {
     return (
-        <Grid xs={xs} css={{ padding: 0 }}>
+        <Grid xs={xs} sm={sm} md={md} css={{ padding: 0 }}>
             <Grid xs={6}>
                 <Input
                     width="186px"

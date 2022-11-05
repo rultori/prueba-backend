@@ -1,14 +1,13 @@
-import { Grid, Radio } from '@nextui-org/react'
+import { Grid, GridProps, Radio } from '@nextui-org/react'
 import { FC } from 'react'
 
-interface Props {
+interface Props extends GridProps {
     handleCurrencyChange: (e: string) => void,
-    xs?: number,
 }
 
-export const CurrencyRadioFilter: FC<Props> = ({ handleCurrencyChange, xs }) => {
+export const CurrencyRadioFilter: FC<Props> = ({ handleCurrencyChange, xs, sm, md }) => {
     return (
-        <Grid xs={xs} css={{alignContent: 'end'}}>
+        <Grid xs={xs} sm={sm} md={md} css={{ alignContent: 'end' }}>
             <Radio.Group orientation="horizontal" label="Moneda" defaultValue="MXN" onChange={handleCurrencyChange} >
                 <Radio value="MXN" color="primary">
                     MXN

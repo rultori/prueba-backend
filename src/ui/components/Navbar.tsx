@@ -21,10 +21,10 @@ export const Navbar = () => {
             </NUINavbar.Brand>
             <NUINavbar.Content>
                 <Link to="/products/topselling">
-                    <Text h5>Productos más vendidos</Text>
+                    <Text css={{ margin: 'auto', '&:hover': { color: '$secondary' } }} h5>Productos más vendidos</Text>
                 </Link>
                 <Link to="/orders">
-                    <Text h5>Ordenes</Text>
+                    <Text css={{ margin: 'auto', '&:hover': { color: '$secondary' } }} h5>Ordenes</Text>
                 </Link>
             </NUINavbar.Content>
         </NUINavbar >

@@ -1,4 +1,4 @@
-import { Button, Container, Table, Text } from '@nextui-org/react'
+import { Button, Table, Text } from '@nextui-org/react'
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -10,14 +10,17 @@ interface Props {
 export const OrdersPerProductListTable: FC<Props> = ({ product, setShowModal }) => {
     const navigate = useNavigate()
 
-    const handleClick = (e: any) => {
+    const handleClick = (id: string) => {
         setShowModal(false)
-        navigate(`/orders/${e}`)
+        setTimeout(() => {
+            navigate(`/orders/${id}`)
+        }, 300)
     }
-    
+
     return (
         <div style={{ marginTop: 20 }}>
             <Text h3>Órdenes en las que aparece el producto</Text>
+            <Text>{product.attributes.title}</Text>
             {
                 <Table key={product.id}>
                     <Table.Header>

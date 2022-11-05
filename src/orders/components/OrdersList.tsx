@@ -44,13 +44,14 @@ export const OrdersList: FC = () => {
                 <DateRangeFilter
                     startDate={params.start_date}
                     endDate={params.end_date}
-                    xs={6}
+                    xs={12}
+                    sm={4}
                     handleEndDateChange={handleEndDateChange}
                     handleStartDateChange={handleStartDateChange}
                 />
-                <CurrencyRadioFilter xs={3} handleCurrencyChange={handleCurrencyChange} />
-                <Grid xs={3} css={{ display: 'flex', alignItems: 'end' }}>
-                    <Button onClick={handleApply}>Aplicar</Button>
+                <CurrencyRadioFilter xs={12} sm={3} handleCurrencyChange={handleCurrencyChange} />
+                <Grid xs={12} sm={3} css={{ display: 'flex', alignItems: 'end' }}>
+                    <Button onClick={handleApply} css={{ '@xs': { width: '100%' }, '@sm': { width: 'fit-content' } }}>Aplicar</Button>
                 </Grid>
             </Grid.Container>
             {

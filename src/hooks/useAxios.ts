@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 
-axios.defaults.baseURL = 'http://api-backend.test/api/v1/'
+axios.defaults.baseURL = import.meta.env['VITE_AXIOS_BASE_URL']
 
 export const useAxios = (axiosParams: AxiosRequestConfig) => {
     const [response, setResponse] = useState<AxiosResponse>()
