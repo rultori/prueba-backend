@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 
-axios.defaults.baseURL = import.meta.env['VITE_AXIOS_BASE_URL'] || 'http://74.208.160.228:9000/api/v1/'
+axios.defaults.baseURL = import.meta.env['VITE_AXIOS_BASE_URL'] || 'http://testaframework.com/api/v1/'
 
 export const useAxios = (axiosParams: AxiosRequestConfig) => {
     const [response, setResponse] = useState<AxiosResponse>()
