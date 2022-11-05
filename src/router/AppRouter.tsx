@@ -13,10 +13,10 @@ export const AppRouter = () => {
             <Container>
                 <Routes>
                     <Route path="/" element={<Navigate to="/products" />} />
-                    <Route path="orders" element={<OrdersPage />} />
-                    <Route path="orders/:id" element={<OrderDetailsPage />} />
                     <Route path="products" element={<Navigate to="/products/topselling" />} />
                     <Route path="products/topselling" element={<TopSellingProductsPage />} />
+                    <Route path="orders" element={<OrdersPage />} />
+                    <Route path="orders/:id" element={<OrderDetailsPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </Container>
