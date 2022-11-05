@@ -4,6 +4,9 @@ Ejecutar el siguiente comando para instalar las dependencias:
 ```sh
 npm install
 ```
+
+Copiar el archivo .env.example como .env y añadir la url de la API en la variable de entorno
+
 Ejecutar el siguiente comando para hacer el build:
 ```sh
 npm run build
