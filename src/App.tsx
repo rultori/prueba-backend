@@ -1,5 +1,4 @@
 import { NextUIProvider } from '@nextui-org/react'
-import { darkTheme } from './themes'
 import { AppRouter } from './router/AppRouter'
 
 function App() {
