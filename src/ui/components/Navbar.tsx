@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 export const Navbar = () => {
     return (
-        <NUINavbar variant="sticky" css={{ zIndex: 999 }}>
+        <NUINavbar variant="sticky" css={{ zIndex: 999, '& > .nextui-navbar-container': { maxWidth: 'none' } }}>
             <NUINavbar.Brand>
                 <NavLink to="/" style={{ display: 'flex' }}>
                     <Text css={{
